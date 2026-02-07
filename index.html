@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lima Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+<script>
+(function () {
+    emailjs.init("C8VOk_Y3JcKn0vtBH"); // ← replace with your EmailJS public key
+})();
+</script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+</head>
+<body>
+    <!-- Particle Background -->
+    <canvas id="particle-bg"></canvas>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-left">
+                <a class="logo" href="#home">Lima.<span class="dot">.</span></a>
+            </div>
+
+            <div class="nav-center">
+                <button class="nav-btn" data-target="work">Work</button>
+                <button class="nav-btn" data-target="about">About</button>
+                <button class="nav-btn" data-target="contact">Contact</button>
+            </div>
+
+            <div class="nav-right">
+                <a class="resume-btn"
+                   href="https://drive.google.com/file/d/1sgGtkjtRpK7AY0iYl9DpfNhlPAM643wg/view?usp=drive_link"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                   Resume
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+        <div class="scroll-dot active" data-target="home"></div>
+        <div class="scroll-dot" data-target="work"></div>
+        <div class="scroll-dot" data-target="about"></div>
+        <div class="scroll-dot" data-target="contact"></div>
+    </div>
+    
+    <!-- Particle interaction info -->
+    <div class="particle-info">
+        <i class="fas fa-mouse-pointer"></i> Move mouse to interact 
+    </div>
+    
+    <!-- Home Section -->
+    <section id="home">
+        <div class="section-content">
+            <div class="home-layout">
+                <div class="home-left">
+                    <p class="home-greeting fade-in">Hi, I am</p>
+                    <h1 class="hero-title fade-in">Lima Sailo.</h1>
+                    <p class="hero-subtitle fade-in">Coder & Designer</p>
+                    <p class="home-description fade-in">I'm a graduate from Kristu Jayanti University, fueled by a deep passion for technology and design. From software engineering to UI/UX, I am driven to explore and innovate.</p>
+                    <p class="home-cta fade-in">Eagerly seeking my first opportunity!</p>
+                    <div class="fade-in" style="margin-top: 40px;">
+                        <button class="submit-btn" id="explore-btn">Explore My Works <i class="fas fa-arrow-down"></i></button>
+                    </div>
+                </div>
+                <div class="home-right fade-in">
+                    <!-- Placeholder for illustration/image -->
+                    <div class="home-image-placeholder">
+                        <img src="images/logo.png" alt="My Photo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Work Section -->
+    <section id="work">
+        <div class="section-content">
+            <h2 class="section-title fade-in">My Works</h2>
+
+            <!-- Project 1 -->
+            <div class="project-row fade-in">
+                <div class="project-image">
+                    <a href="https://hlinasailo.github.io/ANGELBEAST/index.html" target="_blank">
+                        <img src="images/p1.jpg" alt="AngleBeast Art Display">
+                    </a>
+                </div>
+                <div class="project-text">
+                    <h3>AngleBeast Art Display</h3>
+                    <p>Artist website for Displaying Painting and Comics</p>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-row reverse fade-in">
+                <div class="project-image">
+                    <a href="https://hlinasailo.github.io/lz-project/index.html" target="_blank">
+                        <img src="images/p2.jpg" alt="Group Chat Website">
+                    </a>
+                </div>
+                <div class="project-text">
+                    <h3>Kristu Jayanti University(BA Department) Group Chat Website</h3>
+                    <p>BA Department Group Chat Website and they can interact anonymously and share stories</p>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-row fade-in">
+                <div class="project-image">
+                    <a href="#" target="_blank">
+                        <img src="images/p3.png" alt="Healtyfy AI Application">
+                    </a>
+                </div>
+                <div class="project-text">
+                    <h3>Healtyfy AI Application</h3>
+                    <p>Mobile Ai powered to predict Lung, Heart, Stroke, Diabeties for users</p>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-row reverse fade-in">
+                <div class="project-image">
+                    <a href="#" target="_blank">
+                        <img src="images/p4.png" alt="Newserg AI News">
+                    </a>
+                </div>
+                <div class="project-text">
+                    <h3>Newserg AI news</h3>
+                    <p>Provide daily news about new Ai application and notify user who subscribe</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-content">
+            <h2 class="section-title fade-in">About Me</h2>
+            <div class="about-content">
+                <div class="about-image fade-in">
+                    <img src="images/face.jpeg" alt="My Photo">
+                </div>
+                <div class="about-text fade-in">
+                    <p>I'm a creative developer specializing in interactive web experiences and particle systems. My passion lies at the intersection of art and technology, creating visually stunning and engaging digital solutions.</p>
+                    <p>With expertise in modern JavaScript and Canvas API, I build immersive experiences that push the boundaries of what's possible in the browser.</p>
+                    
+                    <div class="skills">
+                        <span class="skill">HTML/CSS</span>
+                        <span class="skill">JavaScript</span>
+                        <span class="skill">Python</span>
+                        <span class="skill">Java</span>
+                        <span class="skill">React</span>
+                        <span class="skill">Flutter</span>
+                        <span class="skill">Node & Express.js</span>
+                        <span class="skill">PostgreSQL</span>
+                        <span class="skill">Bootstrap</span>
+                        <span class="skill">PHP</span>
+                        <span class="skill">MongoDB</span>
+                        <span class="skill">Tailwind</span>
+                        <span class="skill">Tensorflow</span>
+                        <span class="skill">Firebase</span>
+                        <span class="skill">Interactive Design</span>
+                        <span class="skill">Animation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-content">
+            <h2 class="section-title fade-in">Get In Touch</h2>
+            <p class="hero-subtitle fade-in" style="margin-bottom: 40px;">Have a project in mind? Let's create something amazing together.</p>
+            
+            <form class="contact-form fade-in">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Your email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="5" placeholder="Your message"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+            </form>
+            
+            <div class="social-links fade-in">
+                <a href="https://github.com/hlinasailo" target="_blank" class="social-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/lalhlimpuia-sailo-6311b4252" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.instagram.com/hlima__sailo/" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>© 2026 Lima Sailo. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // PARTICLE SYSTEM
+        const particleCanvas = document.getElementById("particle-bg");
+        const particleCtx = particleCanvas.getContext("2d");
+        
+        let w, h;
+        function resizeParticleCanvas() {
+            w = particleCanvas.width = window.innerWidth;
+            h = particleCanvas.height = window.innerHeight;
+        }
+        resizeParticleCanvas();
+        window.addEventListener("resize", resizeParticleCanvas);
+        
+        const mouse = { x: 0, y: 0 };
+        
+        window.addEventListener("mousemove", e => {
+            mouse.x = e.x;
+            mouse.y = e.y;
+        });
+        
+        class Particle {
+            constructor() {
+                this.x = Math.random() * w;
+                this.y = Math.random() * h;
+                this.vx = (Math.random() - 0.5) * 0.5;
+                this.vy = (Math.random() - 0.5) * 0.5;
+                this.size = Math.random() * 2 + 1;
+                this.color = `rgba(${136 + Math.random() * 50}, ${207 + Math.random() * 20}, 255, ${0.5 + Math.random() * 0.5})`;
+            }
+            
+            move() {
+                this.x += this.vx;
+                this.y += this.vy;
+                
+                // Mouse attraction/repulsion
+                const dx = mouse.x - this.x;
+                const dy = mouse.y - this.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                
+                if (dist < 120) {
+                    this.x -= dx * 0.01;
+                    this.y -= dy * 0.01;
+                }
+                
+                // Bounce off edges
+                if (this.x < 0 || this.x > w) this.vx *= -1;
+                if (this.y < 0 || this.y > h) this.vy *= -1;
+                
+                // Slow drift
+                this.vx += (Math.random() - 0.5) * 0.01;
+                this.vy += (Math.random() - 0.5) * 0.01;
+                
+                // Limit velocity
+                const speed = Math.sqrt(this.vx * this.vx + this.vy * this.vy);
+                if (speed > 1) {
+                    this.vx = (this.vx / speed) * 1;
+                    this.vy = (this.vy / speed) * 1;
+                }
+            }
+            
+            draw() {
+                particleCtx.beginPath();
+                particleCtx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                particleCtx.fillStyle = this.color;
+                particleCtx.fill();
+            }
+        }
+        
+        const particles = Array.from({ length: 200 }, () => new Particle());
+        
+        function connectParticles() {
+            for (let a = 0; a < particles.length; a++) {
+                for (let b = a + 1; b < particles.length; b++) {
+                    const dx = particles[a].x - particles[b].x;
+                    const dy = particles[a].y - particles[b].y;
+                    const dist = dx * dx + dy * dy;
+                    
+                    if (dist < 10000) {
+                        const opacity = 1 - (dist / 10000);
+                        particleCtx.strokeStyle = `rgba(136, 207, 255, ${opacity * 0.1})`;
+                        particleCtx.beginPath();
+                        particleCtx.moveTo(particles[a].x, particles[a].y);
+                        particleCtx.lineTo(particles[b].x, particles[b].y);
+                        particleCtx.stroke();
+                    }
+                }
+            }
+        }
+        
+        function animateParticles() {
+            particleCtx.clearRect(0, 0, w, h);
+            
+            particles.forEach(p => {
+                p.move();
+                p.draw();
+            });
+            
+            connectParticles();
+            
+            requestAnimationFrame(animateParticles);
+        }
+        
+        // Navigation and scrolling functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize particle system
+            animateParticles();
+            
+            // Get all sections and navigation elements
+            const sections = document.querySelectorAll('section');
+            const navButtons = document.querySelectorAll('.nav-btn');
+            const scrollDots = document.querySelectorAll('.scroll-dot');
+            const exploreBtn = document.getElementById('explore-btn');
+            
+            // Set active section
+            function setActiveSection(targetId) {
+                // Update navigation buttons
+                navButtons.forEach(btn => {
+                    btn.classList.toggle('active', btn.getAttribute('data-target') === targetId);
+                });
+                
+                // Update scroll dots
+                scrollDots.forEach(dot => {
+                    dot.classList.toggle('active', dot.getAttribute('data-target') === targetId);
+                });
+                
+                // Scroll to section
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+            
+            // Handle navigation button clicks
+            navButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetId = this.getAttribute('data-target');
+                    setActiveSection(targetId);
+                });
+            });
+            
+            // Handle scroll dot clicks
+            scrollDots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    const targetId = this.getAttribute('data-target');
+                    setActiveSection(targetId);
+                });
+            });
+            
+            // Handle explore button click
+            exploreBtn.addEventListener('click', function() {
+                setActiveSection('work');
+            });
+            
+            // Handle scroll events to update active section
+            window.addEventListener('scroll', function() {
+                let currentSection = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (window.pageYOffset >= sectionTop - 200) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+                
+                if (currentSection) {
+                    navButtons.forEach(btn => {
+                        btn.classList.toggle('active', btn.getAttribute('data-target') === currentSection);
+                    });
+                    
+                    scrollDots.forEach(dot => {
+                        dot.classList.toggle('active', dot.getAttribute('data-target') === currentSection);
+                    });
+                }
+            });
+            
+            // Fade-in animation on scroll
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            function checkFade() {
+                fadeElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementVisible = 150;
+                    
+                    if (elementTop < window.innerHeight - elementVisible) {
+                        element.classList.add('visible');
+                    }
+                });
+            }
+            
+            // Initial check
+            checkFade();
+            
+            // Check on scroll
+            window.addEventListener('scroll', checkFade);
+            
+            // Form submission
+            const contactForm = document.querySelector('.contact-form');
+
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+
+                // validation
+                if (!name || !email || !message) {
+                    alert('Please fill in all fields.');
+                    return;
+                }
+
+                // send via EmailJS
+                emailjs.send("service_bdgd5ga", "template_kt6sg1j", {
+                    name: name,
+                    email: email,
+                    message: message
+                })
+                .then(() => {
+                    alert(`Thank you ${name}! Your message has been sent.`);
+                    contactForm.reset();
+                })
+                .catch(error => {
+                    alert("Oops! Failed to send message.");
+                    console.error(error);
+                });
+            });
+            
+            // Project card interaction
+            const projectCards = document.querySelectorAll('.project-card');
+            projectCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    // Increase particle attraction when hovering over cards
+                    particles.forEach(p => {
+                        p.vx *= 1.2;
+                        p.vy *= 1.2;
+                    });
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    // Reset particle speed
+                    particles.forEach(p => {
+                        p.vx /= 1.2;
+                        p.vy /= 1.2;
+                    });
+                });
+                
+                card.addEventListener('click', function() {
+                    alert('Project details would open here in a full implementation.');
+                });
+            });
+            
+            // Enhance particle interaction based on scroll position
+            window.addEventListener('scroll', function() {
+                const scrollY = window.scrollY;
+                const maxScroll = document.body.scrollHeight - window.innerHeight;
+                const scrollPercent = scrollY / maxScroll;
+                
+                // Adjust particle behavior based on scroll
+                particles.forEach(p => {
+                    p.vx += (Math.random() - 0.5) * scrollPercent * 0.05;
+                    p.vy += (Math.random() - 0.5) * scrollPercent * 0.05;
+               
+                });
+            });
+        });
+    </script>
+</body>
+</html>
